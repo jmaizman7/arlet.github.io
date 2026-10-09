@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Arlet | Vidriería | Soluciones integrales en construcción en seco y acabados</title>
+<style>
+:root{--navy:#0b3a63;--navy2:#08294a;--blue:#1b8ef2;--bg:#f4f8fc;--card:#fff;--text:#14283d;--muted:#5b6b7c;--line:#dbe6f0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a1624;--card:#12253a;--text:#e6eef7;--muted:#9db0c4;--line:#22384f}}
+:root[data-theme="dark"]{--bg:#0a1624;--card:#12253a;--text:#e6eef7;--muted:#9db0c4;--line:#22384f}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--navy);color:#fff}
+.nav{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:flex;align-items:center;gap:8px;font-weight:800;line-height:1;letter-spacing:.5px}
+.logo small{display:block;font-size:13px}.logo b{display:block;font-size:20px;color:#3aa0ff}
+nav{margin-left:auto;display:flex;gap:20px;font-size:14px}
+nav a{padding:6px 0;opacity:.9}nav a:hover{opacity:1;border-bottom:2px solid #3aa0ff}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:10px;font-weight:600;background:var(--blue);color:#fff;border:2px solid var(--blue)}
+.btn.out{background:transparent;color:var(--blue)}
+.btn.pill{border-radius:30px;padding:9px 18px;font-size:14px}
+.hero{background:linear-gradient(100deg,var(--card) 40%,transparent 70%),linear-gradient(160deg,#cfe4f7,#6fa6d6 55%,#0b3a63);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:20px;align-items:center;min-height:420px;padding-top:30px;padding-bottom:30px}
+h1{margin:0;font-size:clamp(40px,7vw,68px);line-height:.95;font-weight:900;color:var(--navy)}
+h1 span{color:var(--blue);display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h1{color:#fff}}
+.hero p{font-size:20px;margin:16px 0 22px;max-width:420px}
+.cta{display:flex;gap:12px;flex-wrap:wrap}
+.perks{display:flex;gap:24px;margin-top:26px;font-size:14px;flex-wrap:wrap}
+.perks div{display:flex;align-items:center;gap:8px}
+.perks i{font-style:normal;font-size:22px}
+.building{width:100%;height:100%;min-height:300px;object-fit:cover;border-radius:14px;display:block;box-shadow:0 10px 30px rgba(11,58,99,.3)}
+.tag{position:absolute;right:36px;bottom:40px;color:#fff;text-align:right;font-size:18px;max-width:280px;text-shadow:0 1px 6px rgba(0,0,0,.5)}
+h2{text-align:center;color:var(--navy);font-size:26px;letter-spacing:1px;margin:0;text-transform:uppercase}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:#fff}}
+h2:after{content:"";display:block;width:60px;height:3px;background:var(--blue);margin:8px auto 0}
+.sub{text-align:center;color:var(--muted);margin:10px 0 28px}
+section.s{padding:44px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:0 4px 14px rgba(11,58,99,.07);transition:transform .2s}
+.card:hover{transform:translateY(-4px)}
+.ph{height:130px;background:#cfe0f0}.ph.alu{display:grid;place-items:center;background:repeating-linear-gradient(90deg,#8fa3b5 0 58px,#6f8498 58px 60px);color:#fff;font-weight:800;letter-spacing:2px;text-transform:uppercase}.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.card h3{margin:0;padding:14px;font-size:15px;display:flex;align-items:center;gap:10px}
+.card h3:before{content:"";width:10px;height:10px;border-radius:50%;background:var(--blue);flex:none}
+.mv{background:var(--navy);color:#fff;padding:40px 0}
+.mv .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.mv h3{margin:0 0 8px;letter-spacing:2px;color:#7cc0ff}.mv p{margin:0;opacity:.92}
+.loc{display:grid;grid-template-columns:1.3fr 1fr;gap:20px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.box h3{margin:0 0 10px;color:var(--navy)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .box h3{color:#7cc0ff}}
+.shop{width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:10px;margin-top:14px;display:block}
+.box ul{list-style:none;padding:0;margin:10px 0 0}.box li{margin:8px 0}
+.burger{display:none;width:42px;height:42px;border:0;border-radius:10px;background:rgba(255,255,255,.12);color:#fff;align-items:center;justify-content:center;cursor:pointer;flex-direction:column;gap:5px;padding:0}.burger span{display:block;width:20px;height:2px;background:#fff;border-radius:2px;transition:.2s}.burger.on span:nth-child(1){transform:translateY(7px) rotate(45deg)}.burger.on span:nth-child(2){opacity:0}.burger.on span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:24px 20px 90px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:20;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+@media (max-width:760px){
+.nav .btn{margin-left:auto}.burger{display:flex}
+nav{display:none;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--navy2);padding:8px 20px 14px;box-shadow:0 12px 20px rgba(0,0,0,.25)}
+nav.open{display:flex}nav a{padding:14px 0;font-size:16px;border-bottom:1px solid rgba(255,255,255,.12)}nav a:hover{border-bottom:1px solid rgba(255,255,255,.12)}
+.hero .wrap{grid-template-columns:1fr;min-height:0}.hero{background:linear-gradient(180deg,var(--card) 60%,#cfe4f7)}
+.building{min-height:220px}.tag{display:none}
+.mv .wrap,.loc{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#inicio" aria-label="Arlet - Inicio"><img src="images/logo-blanco.png" alt="Arlet" style="height:46px;width:auto"></a>
+<nav><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#nosotros">Nosotros</a><a href="#ubicacion">Ubicación</a><a href="#contacto">Contacto</a></nav>
+<a class="btn pill" href="https://wa.me/59175002558" target="_blank" rel="noopener">💬 Contáctanos</a>
+<button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
+</div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="wrap">
+<div>
+<h1><img src="images/logo-azul.png" alt="Arlet - Nueva imagen, mejor servicio" style="width:min(100%,420px);height:auto;display:block"></h1>
+<p>Soluciones integrales en construcción en seco y acabados</p>
+<div class="cta"><a class="btn" href="https://wa.me/59175002558?text=Hola%2C%20quiero%20solicitar%20una%20cotizaci%C3%B3n" target="_blank" rel="noopener">📄 Solicita tu cotización</a><a class="btn out" href="#servicios">Ver servicios ›</a></div>
+<div class="perks"><div><i>🛡️</i>Calidad<br>garantizada</div><div><i>👥</i>Asesoría<br>personalizada</div><div><i>⚙️</i>Proyectos<br>a tu medida</div></div>
+</div>
+<img class="building" src="images/portada.jpg" alt="Edificio moderno con ventanales de vidrio">
+<div class="tag">Diseño, funcionalidad y elegancia en cada proyecto</div>
+</div></section>
+
+<section class="s" id="servicios"><div class="wrap">
+<h2>Nuestros servicios</h2><p class="sub">Trabajamos con materiales de alta calidad para hacer realidad tus proyectos</p>
+<div class="grid">
+<div class="card"><div class="ph"><img src="images/servicio-1.jpg" alt="" loading="lazy"></div><h3>Cielo falso en PVC</h3></div>
+<div class="card"><div class="ph"><img src="images/servicio-2.jpg" alt="" loading="lazy"></div><h3>Placas de yeso</h3></div>
+<div class="card"><div class="ph"><img src="images/servicio-3.jpg" alt="" loading="lazy"></div><h3>Diseños en salas y cocinas</h3></div>
+<div class="card"><div class="ph"><img src="images/servicio-4.jpg" alt="" loading="lazy"></div><h3>División de pared</h3></div>
+<div class="card"><div class="ph"><img src="images/servicio-5.jpg" alt="" loading="lazy"></div><h3>Ventanas y puertas Blindex</h3></div>
+<div class="card"><div class="ph"><img src="images/servicio-6.jpg" alt="" loading="lazy"></div><h3>Ventanas en carpintería de aluminio</h3></div>
+<div class="card"><div class="ph"><img src="images/servicio-7.jpg" alt="" loading="lazy"></div><h3>Puertas de aluminio para habitación y baño</h3></div>
+<div class="card"><div class="ph"><img src="images/servicio-8.jpg" alt="" loading="lazy"></div><h3>Fachadas de vidrio</h3></div>
+<div class="card"><div class="ph"><img src="images/servicio-9.jpg" alt="" loading="lazy"></div><h3>Barandas</h3></div>
+<div class="card"><div class="ph alu"><span>Alucobond</span></div><h3>Fachada en alucobond</h3></div>
+</div></div></section>
+
+<section class="mv" id="nosotros"><div class="wrap">
+<div><h3>🎯 MISIÓN</h3><p>Brindar soluciones integrales en construcción en seco y acabados, combinando materiales, asesoramiento especializado e instalación con precisión, rapidez y excelente terminación.</p></div>
+<div><h3>👁️ VISIÓN</h3><p>Ser la empresa referente en construcción en seco, acabados y suministros especializados de materiales en Yapacaní y su área de influencia, reconocida por la calidad de sus terminaciones y la confianza del cliente.</p></div>
+</div></section>
+
+<section class="s" id="ubicacion"><div class="wrap loc">
+<div class="box"><h3>📍 Nuestra ubicación</h3><p>Av. Epifanio Ríos, al frente de la agencia Yapacaní, al lado de la oficina de gas domiciliario.</p><img class="shop" src="images/local.jpg" alt="Local de Arlet en Yapacaní"></div>
+<div class="box" id="contacto"><h3>Contáctanos</h3><strong>Lic. Delmira Miranda Villca</strong>
+<ul><li>📞 <a href="tel:+59175002558">+591 75002558</a></li><li>📍 Yapacaní - Santa Cruz</li></ul>
+<p><a class="btn" href="https://wa.me/59175002558" target="_blank" rel="noopener">💬 Escríbenos por WhatsApp</a></p></div>
+</div></section>
+</main>
+<footer>© 2026 Vidriería Arlet · Yapacaní, Santa Cruz</footer>
+<a class="btn pill fab" href="https://wa.me/59175002558" target="_blank" rel="noopener">💬 Contáctanos</a>
+<script>
+(function(){var b=document.getElementById('burger'),n=document.querySelector('header nav');
+function t(o){n.classList.toggle('open',o);b.classList.toggle('on',o);b.setAttribute('aria-expanded',o)}
+b.addEventListener('click',function(){t(!n.classList.contains('open'))});
+n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){t(false)})});
+window.addEventListener('resize',function(){if(innerWidth>760)t(false)});})();
+</script>
+</body>
+</html>
